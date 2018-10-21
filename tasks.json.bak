@@ -1,0 +1,23 @@
+[
+  {
+    "id" : 1,
+    "description" : "Tarefa 1",
+    "responsible" : "Responsável 1",
+    "deadline" : "2018-08-20",
+    "list" : "todo"
+  },
+  {
+    "id" : 2,
+    "description" : "Tarefa 2",
+    "responsible" : "Responsável 2",
+    "deadline" : "2018-08-20",
+    "list" : "todo"
+  },  
+  {
+    "id" : 3,
+    "description" : "Tarefa 3",
+    "responsible" : "Responsável 3",
+    "deadline" : "2018-08-20",
+    "list" : "done"
+  }
+]

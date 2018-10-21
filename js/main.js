@@ -52,7 +52,8 @@ insert_task.onclick = function(event) {
 
 var updateOnServer = function() {
 	var taskRequest = new XMLHttpRequest();
-    taskRequest.open('POST', 'main.php', true);
+    //taskRequest.open('POST', 'main.php', true);
+    taskRequest.open('POST', 'http://localhost:8080/', true);
     taskRequest.onload = function() {
         if (taskRequest.status >= 200 && taskRequest.status < 400) {
             console.log("Sucesso em ajax: " + taskRequest.responseText);
@@ -168,7 +169,8 @@ var reset = function() {
 
 function ajaxLoadRequest() {
     var taskRequest = new XMLHttpRequest();
-    taskRequest.open('GET', 'tasks.json');
+    //taskRequest.open('GET', 'tasks.json');
+    taskRequest.open('GET', 'http://localhost:8080/');
     taskRequest.onload = function () {
         if (taskRequest.status >= 200 && taskRequest.status < 400) {
             var taskListJson = taskRequest.responseText;
