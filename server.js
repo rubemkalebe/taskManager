@@ -19,10 +19,26 @@ app.route('/login')
         res.sendFile(__dirname + '/public/login.html')
     })
     .post((req, res) => {
-        var username = req.body.username,
-            password = req.body.password;
-        console.log(username + ":" + password);
-        res.redirect('/home');
+    	var username = req.body.username,
+            password = req.body.password
+            auth = false;
+    	fs.readFile('users.json', function(err, data) {
+    		if(err) throw err;
+
+    		var usersJSON = JSON.parse(data.toString());
+    		for(var i = 0; i < usersJSON.length; i++) {
+    			if(username == usersJSON[i].username && password == usersJSON[i].password) {
+    				auth = true;
+    				break;
+    			}
+    		}
+
+	        if(auth) {
+	        	res.redirect('/home');
+	        } else {
+	        	res.redirect('/login');
+	        }
+    	});
     });
 
 app.route('/register')
@@ -34,8 +50,21 @@ app.route('/register')
         	usuario = req.body.usuario,
         	senha = req.body.senha,
             corfirmSenha = req.body.corfirmSenha;
-        console.log(nome + " " + usuario + " " + senha + " " + corfirmSenha);
-        res.redirect('/login');
+        
+        fs.readFile('users.json', function(err, data) {
+    		if(err) throw err;
+    		var usersJSON = JSON.parse(data.toString()),
+    			user = {
+    				"fullname" : nome,
+				    "username" : usuario,
+				    "password" : senha
+				}
+			usersJSON.push(user);
+    		fs.writeFile('users.json', JSON.stringify(usersJSON), function(err) {
+				if(err) throw err;
+				res.redirect('/login');
+			});
+    	});
     });
 
 app.get('/home', (req, res) => {
