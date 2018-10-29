@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lista de Tarefas - Registro</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Rubem Kalebe">
+	    <meta name="description" content="Gerenciador básico de afazeres">
+
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+	    <link rel="stylesheet" href="css/style.css" charset="utf-8">
+	</head>
+
+	<body class=" w3-teal">
+		<div id="center">
+
+			<!-- HEADER -->
+			<header>
+				<div class="w3-container w3-center">
+					<h1>Lista de Tarefas</h1>
+				</div>
+			</header>
+
+			<div class="w3-container div-form-container">
+				<div id="grid" class="w3-row m8 w3-half">
+					
+					<form class="w3-card-4 w3-auto form-card" action="http://localhost:8080/register" method="post">
+						<label>Nome completo</label>
+						<input class="w3-input" type="text" name="nome">
+
+						<label>Usuário</label>
+						<input class="w3-input" type="text" name="usuario">
+
+						<label>Senha</label>
+						<input class="w3-input" type="password" name="senha">
+
+						<label>Confirme a senha</label>
+						<input class="w3-input" type="password" name="corfirmSenha">
+
+						<button class="w3-btn w3-white submit-btn" type="submit">Registrar</button>
+
+						<p>
+				          <a href="/login">Já se cadastrou? Faça login aqui</a>
+				        </p>
+					</form>
+				</div>
+			</div>
+			
+
+			<!-- FOOTER -->
+			<footer>
+				<div class="w3-container w3-center">
+					<p>
+			          Copyright &copy; 2018 - Rubem Kalebe<br>
+			          <a href="mailto:rubemkalebe@gmail.com">rubemkalebe@gmail.com</a>
+			        </p>
+				</div>
+			</footer>
+
+			<script type="text/javascript" src="js/main.js"></script>
+		</div>
+	</body>
+</html>

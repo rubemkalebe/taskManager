@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lista de Tarefas</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Rubem Kalebe">
+	    <meta name="description" content="Gerenciador básico de afazeres">
+
+	    <link rel="stylesheet" href="css/style.css" charset="utf-8">
+	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	</head>
+
+	<body class="w3-teal">
+		<div id="center">
+
+			<!-- HEADER -->
+			<header>
+				<div class="w3-container w3-center">
+					<h1>Lista de Tarefas</h1>
+				</div>
+			</header>
+			
+			<div id="grid">
+					
+				<div id="new_task_modal" class="modal">
+				  <div class="modal_content">
+				  	<div id="modal_header">
+				  		<span class="close">&times;</span>
+				  		<h2>Tarefa</h2>
+				  	</div>
+
+				  	<div id="modal_body">
+						<p>
+							<input id="task_description" type="text" placeholder="Descrição">
+						</p>
+						<p>
+							<input id="task_responsible" type="text" placeholder="Responsável">
+						</p>
+						<p>
+							<input id="task_deadline" type="date" placeholder="Prazo">
+						</p>
+						<p>
+							<button id="insert_task">Inserir</button>
+							<button id="edit_task">Editar</button>
+						</p>
+				  	</div>
+				    
+				  </div>
+				</div>
+
+				<div class="w3-cell-row">
+					<div id="todo_tasks" class="w3-container w3-green w3-cell w3-center">
+						<div class="w3-card">
+							<header class="w3-container w3-green w3-border-bottom">
+								<div class="w3-container w3-cell">
+									<h2>A Fazer</h2>
+								</div>
+								<div class="w3-container w3-cell">
+									<button id="new_task_btn" class="w3-button w3-circle w3-teal">+</button>
+								</div>
+							</header>
+
+							<div class="w3-container">
+								<ul id="todo_list" class="w3-ul w3-hoverable"></ul>
+							</div>
+						</div>
+					</div>
+
+					<div id="done_tasks" class="w3-container w3-dark-grey w3-cell w3-center">
+						<div class="w3-card">
+							<header class="w3-container w3-dark-grey w3-border-bottom">
+								<h2>Feito</h2>
+							</header>
+
+							<div class="w3-container">
+								<ul id="done_list" class="w3-ul w3-hoverable"></ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- FOOTER -->
+			<footer>
+				<div class="w3-container w3-teal w3-center">
+					<p>
+			          Copyright &copy; 2018 - Rubem Kalebe<br>
+			          <a href="mailto:rubemkalebe@gmail.com">rubemkalebe@gmail.com</a>
+			        </p>
+				</div>
+			</footer>
+
+			<script type="text/javascript" src="js/main.js"></script>
+		</div>
+	</body>
+</html>
