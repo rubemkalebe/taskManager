@@ -24,6 +24,7 @@ O projeto está hospedado em https://github.com/rubemkalebe/taskManager/.
 1. *login.html:* tela de login
 2. *register.html:* tela de cadastro de novos usuários
 3. *home.html:* tela de gerenciamento de tarefas
+4. *statistics.html:* tela mostrando alguns gráficos sobre dados das tarefas
 
 
 ## Equipe de desenvolvimento ##
