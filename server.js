@@ -84,4 +84,8 @@ app.route('/tasks')
 		});
     });
 
+app.get('/statistics', (req, res) => {
+    res.sendFile(__dirname + '/public/statistics.html');
+});
+
 app.listen(app.get('port'), () => console.log(`App started on port ${app.get('port')}`));
